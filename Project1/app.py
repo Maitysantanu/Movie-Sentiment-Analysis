@@ -13,8 +13,8 @@ nltk.download('wordnet')
 nltk.download('omw-1.4')
 
 # Load vectorizer and model
-cv = pickle.load(open('cv.pkl', 'rb'))
-model = pickle.load(open('model.pkl', 'rb'))
+cv = pickle.load(open('./cv.pkl', 'rb'))
+model = pickle.load(open('./model.pkl', 'rb'))
 
 # Initialize Lemmatizer
 lemma = WordNetLemmatizer()
