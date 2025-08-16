@@ -4,6 +4,7 @@ import re
 import nltk
 import pandas as pd
 import numpy as np
+import os
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 
@@ -13,8 +14,12 @@ nltk.download('wordnet')
 nltk.download('omw-1.4')
 
 # Load vectorizer and model
-cv = pickle.load(open('./cv.pkl', 'rb'))
-model = pickle.load(open('./model.pkl', 'rb'))
+base_dir = os.path.dirname(__file__)
+with open(os.path.join(base_dir, 'cv.pkl'), 'rb') as f:
+    cv = pickle.load(f)
+    
+with open(os.path.join(base_dir, 'model.pkl'), 'rb') as f:
+    model = pickle.load(f)
 
 # Initialize Lemmatizer
 lemma = WordNetLemmatizer()
