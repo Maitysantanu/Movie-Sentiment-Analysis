@@ -4,7 +4,7 @@ import re
 import nltk
 import pandas as pd
 import numpy as np
-import os
+import os 
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 
@@ -13,7 +13,7 @@ nltk.download('stopwords')
 nltk.download('wordnet')
 nltk.download('omw-1.4')
 
-# Load vectorizer and model
+# Load vectorizer and model.
 base_dir = os.path.dirname(__file__)
 with open(os.path.join(base_dir, 'cv.pkl'), 'rb') as f:
     cv = pickle.load(f)
